@@ -1,0 +1,4 @@
+index=soc_dashboard
+| timechart span=5m sum(privileged_events) AS privileged_events
+| eventstats avg(privileged_events) AS avg_privileged
+| where privileged_events > avg_privileged * 2
