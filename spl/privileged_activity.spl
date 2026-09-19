@@ -1,0 +1,2 @@
+index=soc_dashboard
+| timechart span=5m sum(privileged_events) AS privileged_events
