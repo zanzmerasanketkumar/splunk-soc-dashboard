@@ -1,1 +1,2 @@
-
+index=soc_dashboard
+| timechart span=5m sum(logins) AS logins
