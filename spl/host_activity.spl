@@ -1,0 +1,5 @@
+index=soc_dashboard
+| stats sum(logins) AS total_logins
+        sum(privileged_events) AS total_privileged_events
+  by host
+| sort - total_logins
