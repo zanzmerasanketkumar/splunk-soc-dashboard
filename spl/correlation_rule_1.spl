@@ -1,0 +1,4 @@
+index=soc_dashboard
+| timechart span=5m sum(logins) AS logins
+| eventstats avg(logins) AS avg_logins
+| where logins > avg_logins * 3
